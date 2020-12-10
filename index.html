@@ -1,37 +1,22 @@
----
-layout: default
-title: Home
----
+<!doctype html>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+  <title>テストサイト</title>
+  <meta name="description" content="The HTML5 site test">
+  <meta name="futonchan" content="SitePoint">
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- JavaScript は最下部に記述 --!>
+  <script src="js/scripts.js"></script> 
+</body>
+</html>
